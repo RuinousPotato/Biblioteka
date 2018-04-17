@@ -29,18 +29,21 @@
         $query = "SELECT Tytul,Autor,Data_wydania,Wydawnictwo,ISBN,Gatunek,Lokalizacja
         FROM ksiazki_arkonska WHERE Autor LIKE '%".$searchAuthor."%'";
       } elseif ($searchAuthor!="" && $searchTitle!="") {
-        $query = "SELECT Tytul,Autor,Data_wydania,Wydawnictwo,ISBN,Gatunek,Lokalizacja
-        FROM ksiazki_arkonska WHERE (Tytul LIKE '%".$searchAuthor."%') AND
-        (Autor LIKE '%".$searchTitle."%')";
+        $query = "SELECT * FROM `ksiazki_arkonska` WHERE `Autor` LIKE '%$searchAuthor%' AND `Tytul` LIKE '%$searchTitle%'";
       }
-
+      /*
+      "SELECT Tytul,Autor,Data_wydania,Wydawnictwo,ISBN,Gatunek,Lokalizacja
+      FROM ksiazki_arkonska WHERE ('Tytul' LIKE '%"."$searchAuthor"."%') AND
+      ('Autor' LIKE '%"."$searchTitle"."%')"
+      */
       /*else {
         $query = "SELECT Tytul,Autor,Data_wydania,Wydawnictwo,ISBN,Gatunek,Lokalizacja
         FROM ksiazki_arkonska WHERE ('Tytul' LIKE '%".$searchAuthor."%')";
       }*/
 
-
+      var_dump($query);
       $result = mysqli_query(OpenCon(),$query);
+      var_dump($result);
       if(mysqli_num_rows($result)>0){
         ?>
         <table border="2" align="center" cellpadding="5" cellspacing="5">
