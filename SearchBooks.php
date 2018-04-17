@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row">
         <div class="col-sm-12">
-          <form name="searchForm" action = "DisplayBooks.php" onsubmit="return validateForm()" method="get">
+          <form name="searchForm" action ="DisplayBooks.php" onsubmit="return validateForm()" method="post">
             <br>
             <center>
               <table border="0" align="center" cellpadding="5" cellspacing="5">
@@ -28,7 +28,7 @@
                 <tr>
                   <td></td>
                   <td>
-                    <input class="btn btn-success" type="submit" value="Szukaj">
+                    <input class="btn btn-success" type="submit" value="Szukaj" name="szukajka">
                     <input class="btn btn-warning" type="reset" value="Resetuj">
                   </td>
                 </tr>
