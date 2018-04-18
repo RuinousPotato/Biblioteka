@@ -26,7 +26,11 @@
               ('$tytul', '$autor', '$data', '$wydawnictwo', '$isbn', '$gatunek', '$lokalizacja')";
     mysqli_query(OpenCon(),$query);
     ?>
-  <h3> Book information is inserted successfully </h3>
-  <a href="SearchBooks.php"> To search for the Book information click here </a>
+  <center>
+    <h3> Książka została dodana do bazy danych </h3>
+    <br>
+    <a href="EnterBook.php" class="btn btn-primary btn-lg"> Powrót do wpisywania książek </a>
+    <a href="SearchBooks.php" class="btn btn-primary btn-lg"> Szukaj lub usuwaj książki </a>    
+  </center>
 </body>
 </html>
