@@ -19,10 +19,10 @@
 
     if(!empty($searchTitle)||!empty($searchAuthor)){
       if ($searchTitle!="" && $searchAuthor==""){
-        $query = "SELECT Tytul,Autor,Data_wydania,Wydawnictwo,ISBN,Gatunek,Lokalizacja
+        $query = "SELECT *
         FROM ksiazki_arkonska WHERE Tytul LIKE '%".$searchTitle."%'";
       } elseif ($searchAuthor!="" && $searchTitle==""){
-        $query = "SELECT Tytul,Autor,Data_wydania,Wydawnictwo,ISBN,Gatunek,Lokalizacja
+        $query = "SELECT *
         FROM ksiazki_arkonska WHERE Autor LIKE '%".$searchAuthor."%'";
       } elseif ($searchAuthor!="" && $searchTitle!="") {
         $query = "SELECT * FROM `ksiazki_arkonska`
@@ -34,29 +34,44 @@
 
       if(mysqli_num_rows($result)>0){
         ?>
-        <table border="2" align="center" cellpadding="5" cellspacing="5">
-        <tr>
-        <th> Tytuł </th>
-        <th> Autor </th>
-        <th> Data wydania </th>
-        <th> Wydawnictwo </th>
-        <th> ISBN </th>
-        <th> Gatunek </th>
-        <th> Lokalizacja </th>
-        </tr>
-        <?php while($row = mysqli_fetch_assoc($result)){
-          ?>
-          <tr>
-          <td><?php echo $row["Tytul"];?> </td>
-          <td><?php echo $row["Autor"];?> </td>
-          <td><?php echo $row["Data_wydania"];?> </td>
-          <td><?php echo $row["Wydawnictwo"];?> </td>
-          <td><?php echo $row["ISBN"];?> </td>
-          <td><?php echo $row["Gatunek"];?> </td>
-          <td><?php echo $row["Lokalizacja"];?> </td>
-          </tr>
+        <form action="ConfirmDeletion.php" method="get">
+          <table border="2" align="center" cellpadding="5" cellspacing="5">
+            <tr>
+              <th> Tytuł </th>
+              <th> Autor </th>
+              <th> Data wydania </th>
+              <th> Wydawnictwo </th>
+              <th> ISBN </th>
+              <th> Gatunek </th>
+              <th> Lokalizacja </th>
+              <th> Do usunięcia </th>
+            </tr>
+            <?php while($row = mysqli_fetch_assoc($result)){
+              ?>
+            <tr>
+              <td><?php echo $row["Tytul"];?> </td>
+              <td><?php echo $row["Autor"];?> </td>
+              <td><?php echo $row["Data_wydania"];?> </td>
+              <td><?php echo $row["Wydawnictwo"];?> </td>
+              <td><?php echo $row["ISBN"];?> </td>
+              <td><?php echo $row["Gatunek"];?> </td>
+              <td><?php echo $row["Lokalizacja"];?> </td>
+              <td>
+                <input type="checkbox" name="<?php echo $row["ID"];?>">
+              </td>
+            </tr>
           <?php
-        }
+        } ?>
+          </table>
+          <br>
+          <center><input class="btn btn-danger btn-md" type="submit" value="Usuń"></center>
+        </form>
+        <br>
+        <center>
+        <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+        <a href="SearchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+        </center>
+        <?php
       } else {
       echo "<center>No books found in the library by the name $searchTitle </center>";
       }
@@ -65,10 +80,9 @@
     }
   }
   ?>
-  </table>
   </body>
 </html>
-<br>
+
 
 <?php
 /*  $query = $_GET['query'];
