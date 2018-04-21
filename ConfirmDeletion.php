@@ -64,7 +64,7 @@
     }
   ?>
   <form name="id" action="DeleteBooks.php" method="get">
-    <input type="hidden" name="id" value="<?php echo "$id_list" ?>">
+    <input type="hidden" name="'id'" value="<?php echo "$id_list" ?>">
     <input class="btn btn-danger" type="submit" value="Potwierdź usunięcie">
   </body>
 </html>
