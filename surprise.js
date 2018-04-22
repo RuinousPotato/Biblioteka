@@ -1,3 +1,12 @@
+function showElem(elem) {
+    var x = document.getElementById(elem);
+    if (x.style.visibility === "visible") {
+        x.style.visibility = "hidden";
+    } else {
+        x.style.visibility = "visible";
+    }
+}
+
 /*
 function showElefant() {
     var x = document.getElementById("elefant");
@@ -17,11 +26,3 @@ function showElephant() {
     }
 }
 */
-function showElem(elem) {
-    var x = document.getElementById(elem);
-    if (x.style.visibility === "visible") {
-        x.style.visibility = "hidden";
-    } else {
-        x.style.visibility = "visible";
-    }
-}

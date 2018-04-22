@@ -63,7 +63,7 @@
       echo "<center><h4>Musisz zaznaczyć przynajmniej jedną książkę!</h4></center>";
     }
   ?>
-  <form name="id" action="DeleteBooks.php" method="get">
+  <form name="id" action="DeleteBooks.php" method="post">
     <input type="hidden" name="'id'" value="<?php echo "$id_list" ?>">
     <input class="btn btn-danger" type="submit" value="Potwierdź usunięcie">
   </body>

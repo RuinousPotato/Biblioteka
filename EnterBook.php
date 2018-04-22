@@ -14,7 +14,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <img src="books02.jpg" class="img-fluid" alt="Responsive image" height="auto" onclick="showElem(&quot;elefant&quot;)">
+        <img src="books02.jpg" class="img-fluid hoverable" alt="Responsive image" height="auto" onclick="showElem(&quot;elefant&quot;)">
       </div>
       <div class="col-sm-6">
           <form action="InsertBooks.php" method="post">

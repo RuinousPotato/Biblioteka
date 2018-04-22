@@ -1,3 +1,7 @@
 .surprise {
   visibility: hidden;
 }
+
+img:hover {
+opacity: 0.7;
+}
