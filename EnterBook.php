@@ -61,7 +61,7 @@
           <br>
       </div>
       <div class="col-sm-3">
-        <img src="books01.jpg" class="img-fluid" alt="Responsive image" height="auto" onclick="showElem(&quot;elephant&quot;)">
+        <img src="books01.jpg" class="img-fluid hoverable" alt="Responsive image" height="auto" onclick="showElem(&quot;elephant&quot;)">
       </div>
     </div>
     <div class="row">
