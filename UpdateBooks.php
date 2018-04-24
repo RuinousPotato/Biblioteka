@@ -1,9 +1,9 @@
 <?php
 
-class UpdateDataDemo {
+class UpdateBooks {
 
     const DB_HOST = 'localhost';
-    const DB_NAME = 'Biblioteka';
+    const DB_NAME = 'biblioteka';
     const DB_USER = 'root';
     const DB_PASSWORD = 'root123';
 
@@ -20,11 +20,27 @@ class UpdateDataDemo {
         // open database connection
         $connStr = sprintf("mysql:host=%s;dbname=%s", self::DB_HOST, self::DB_NAME);
         try {
-            $this->pdo = new PDO($connStr, self::DB_USER, self::DB_PASSWORD);
+            $this->pdo = new PDO('mysql:host=localhost;dbname=biblioteka', self::DB_USER, self::DB_PASSWORD);
         } catch (PDOException $e) {
+            echo "not workind demet";
             die($e->getMessage());
         }
+        var_dump($pdo);
     }
+
+
+    /*
+    try {
+    $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
+    foreach($dbh->query('SELECT * from FOO') as $row) {
+        print_r($row);
+    }
+    $dbh = null;
+    } catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+    }
+    */
 
     /**
      * Update an existing task in the tasks table
@@ -47,19 +63,19 @@ class UpdateDataDemo {
             ':lokalizacja' => $lokalizacja];
 
 
-        $sql = 'UPDATE tasks
+        $sql = 'UPDATE ksiazki_arkonska
                     SET tytul = :tytul,
-                         autor  = :autor,
-                         data    = :data,
-                         wydawnictwo    = :wydawnictwo,
-                         isbn    = :isbn,
-                         gatunek    = :gatunek,
-                         lokalizacja = :lokalizacja
+                        autor = :autor,
+                        data = :data,
+                        wydawnictwo = :wydawnictwo,
+                        isbn = :isbn,
+                        gatunek = :gatunek,
+                        lokalizacja = :lokalizacja
                   WHERE ID = :ID';
 
-        $q = $this->pdo->prepare($sql);
+        $query = $this->pdo->prepare($sql);
 
-        return $q->execute($task);
+        return $query->execute($ksiazka);
     }
 
     /**
@@ -71,13 +87,15 @@ class UpdateDataDemo {
     }
 
 }
+$obj = new UpdateBooks();
 
-$obj = new UpdateDataDemo();
-
-if ($obj->update(2, 'MySQL PHP Update Tutorial',
-                    'MySQL PHP Update using prepared statement',
-                    '2013-01-01',
-                    '2013-01-01') !== false)
+if ($obj->update(13, 'test04',
+                    'test04',
+                    'test04',
+                    'test04',
+                    'test04',
+                    'test04',
+                    'test04') !== false)
     echo 'The task has been updated successfully';
 else
     echo 'Error updated the task';
