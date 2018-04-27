@@ -52,8 +52,8 @@
           <br>
         <br>
         <center>
-        <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
-        <a href="SearchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+          <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+          <a href="SearchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
         </center>
         <?php
       } else {
@@ -66,6 +66,7 @@
   <form name="id" action="DeleteBooks.php" method="post">
     <input type="hidden" name="'id'" value="<?php echo "$id_list" ?>">
     <input class="btn btn-danger" type="submit" value="Potwierdź usunięcie">
+  </form>
   </body>
 </html>
 <br>
