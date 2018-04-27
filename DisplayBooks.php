@@ -35,7 +35,7 @@
       if(mysqli_num_rows($result)>0){
         ?>
         <div id="searchDisplay">
-            <form action="ConfirmDeletion.php" method="get">
+
               <table border="2" align="center" cellpadding="5" cellspacing="5">
                 <tr>
                   <th> Tytuł </th>
@@ -59,64 +59,26 @@
                   <td><?php echo $row["Gatunek"];?> </td>
                   <td><?php echo $row["Lokalizacja"];?> </td>
                   <td>
-                    <input type="checkbox" name="<?php echo $row["ID"];?>">
+                    <input form="delete" type="checkbox" name="<?php echo $row["ID"];?>">
                   </td>
                   <td>
-                    <input form="edit" class="btn btn-primary btn-sm" type="submit" value="Edytuj">
-                    <input form="edit" type="hidden" name="'id'" value="<?php echo $row["ID"];?>">
+                    <form id="edit" action="updateForm.php" method="get">
+                      <input form="edit" class="btn btn-primary btn-sm" type="submit" value="Edytuj">
+                      <input form="edit" type="hidden" name="'id'" value="<?php echo $row["ID"];?>">
+                    </form>
                   </td>
                 </tr>
               <?php
             } ?>
               </table>
               <br>
-              <center><input class="btn btn-danger btn-md" type="submit" value="Usuń"></center>
-            </form>
-        </div>
-
-        <div id="deleteForm">
-            <form action="ConfirmDeletion.php" method="get">
-              <table border="2" align="center" cellpadding="5" cellspacing="5">
-                <tr>
-                  <th> Tytuł </th>
-                  <th> Autor </th>
-                  <th> Data wydania </th>
-                  <th> Wydawnictwo </th>
-                  <th> ISBN </th>
-                  <th> Gatunek </th>
-                  <th> Lokalizacja </th>
-                  <th> Do usunięcia </th>
-                  <th> Edycja </th>
-                </tr>
-                <?php while($row = mysqli_fetch_assoc($result)){
-                  ?>
-                <tr>
-                  <td><?php echo $row["Tytul"];?> </td>
-                  <td><?php echo $row["Autor"];?> </td>
-                  <td><?php echo $row["Data_wydania"];?> </td>
-                  <td><?php echo $row["Wydawnictwo"];?> </td>
-                  <td><?php echo $row["ISBN"];?> </td>
-                  <td><?php echo $row["Gatunek"];?> </td>
-                  <td><?php echo $row["Lokalizacja"];?> </td>
-                  <td>
-                    <input type="checkbox" name="<?php echo $row["ID"];?>">
-                  </td>
-                  <td>
-                    <input form="edit" class="btn btn-primary btn-sm" type="submit" value="Edytuj">
-                    <input form="edit" type="hidden" name="'id'" value="<?php echo $row["ID"];?>">
-                  </td>
-                </tr>
-              <?php
-            } ?>
-              </table>
-              <br>
+            <form id="delete" action="ConfirmDeletion.php" method="get">
               <center><input class="btn btn-danger btn-md" type="submit" value="Usuń"></center>
             </form>
         </div>
 
 
-      <form id="edit" action="updateForm.php" method="get">
-      </form>
+
         <br>
         <center>
           <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
