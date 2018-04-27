@@ -62,9 +62,9 @@
                     <input form="delete" type="checkbox" name="<?php echo $row["ID"];?>">
                   </td>
                   <td>
-                    <form id="edit" action="updateForm.php" method="get">
-                      <input form="edit" class="btn btn-primary btn-sm" type="submit" value="Edytuj">
-                      <input form="edit" type="hidden" name="'id'" value="<?php echo $row["ID"];?>">
+                    <form action="updateForm.php" method="get">
+                      <input class="btn btn-primary btn-sm" type="submit" value="Edytuj">
+                      <input type="hidden" name="'id'" value="<?php echo $row["ID"];?>">
                     </form>
                   </td>
                 </tr>
