@@ -34,8 +34,6 @@
 
       if(mysqli_num_rows($result)>0){
         ?>
-        <div id="searchDisplay">
-
               <table border="2" align="center" cellpadding="5" cellspacing="5">
                 <tr>
                   <th> Tytuł </th>
@@ -48,7 +46,8 @@
                   <th> Do usunięcia </th>
                   <th> Edycja </th>
                 </tr>
-                <?php while($row = mysqli_fetch_assoc($result)){
+                <?php
+                  while($row = mysqli_fetch_assoc($result)){
                   ?>
                 <tr>
                   <td><?php echo $row["Tytul"];?> </td>
@@ -62,28 +61,24 @@
                     <input form="delete" type="checkbox" name="<?php echo $row["ID"];?>">
                   </td>
                   <td>
-                    <form action="updateForm.php" method="get">
+                    <form action="edit.php" method="post">
                       <input class="btn btn-primary btn-sm" type="submit" value="Edytuj">
-                      <input type="hidden" name="'id'" value="<?php echo $row["ID"];?>">
+                      <input type="hidden" name="id" value="<?php echo $row["ID"];?>">
                     </form>
                   </td>
                 </tr>
-              <?php
+          <?php
             } ?>
-              </table>
-              <br>
+            </table>
+            <br>
             <form id="delete" action="ConfirmDeletion.php" method="get">
               <center><input class="btn btn-danger btn-md" type="submit" value="Usuń"></center>
             </form>
-        </div>
-
-
-
-        <br>
-        <center>
-          <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
-          <a href="SearchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
-        </center>
+            <br>
+            <center>
+              <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+              <a href="SearchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+            </center>
         <?php
       } else {
       echo "<center>No books found in the library by the name $searchTitle </center>";
