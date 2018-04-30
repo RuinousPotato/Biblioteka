@@ -21,8 +21,14 @@ try {
     //$query = "UPDATE ksiazki_arkonska SET Tytul='$tytul',Autor='$autor',Data='$data',Wydawnictwo='$wydawnictwo',ISBN='$ISBN',Gatunek='$gatunek',Lokalizacja='$lokalizacja' WHERE ID='$id'";
 
     $query = $pdo->prepare("UPDATE `ksiazki_arkonska` SET `Tytul` = ':tytul', `Autor` = ':autor', `Data_wydania` = ':data', `Wydawnictwo` = ':wydawnictwo', `ISBN` = ':ISBN', `Gatunek` = ':gatunek', `Lokalizacja` = ':lokalizacja' WHERE `ID` = ':id'");
+
+
+    echo ("<pre>");
     print_r($query);
+    echo ("</pre>");
     echo "<br>";
+
+
     $query->bindParam(':id', $id);
     $query->bindParam(':tytul', $tytul);
     $query->bindParam(':autor', $autor);
@@ -31,11 +37,23 @@ try {
     $query->bindParam(':ISBN', $ISBN);
     $query->bindParam(':gatunek', $gatunek);
     $query->bindParam(':lokalizacja', $lokalizacja);
+
+
+    echo ("<pre>");
     print_r($query);
+    echo ("</pre>");
     echo "<br>";
+
+
     $query->execute();
 
+
+    echo ("<pre>");
+    $query->debugDumpParams();
+    echo ("</pre>");
     echo "<br>";
+
+
     echo 'Book updated successfully';
     // $update = updateBooks($query);
     } catch (\Throwable $e) {
