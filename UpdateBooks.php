@@ -20,7 +20,7 @@ try {
     //$query = "UPDATE ksiazki_arkonska SET Tytul='"$name . "',Autor='" . $email . "',Data='" . $pos . "',Wydawnictwo='" . $wydawnictwo . "',ISBN='" . $ISBN . "',Gatunek='" . $gatunek . "',Lokalizacja='" . $lokalizacja . "' WHERE ID=".$id;
     //$query = "UPDATE ksiazki_arkonska SET Tytul='$tytul',Autor='$autor',Data='$data',Wydawnictwo='$wydawnictwo',ISBN='$ISBN',Gatunek='$gatunek',Lokalizacja='$lokalizacja' WHERE ID='$id'";
 
-    $query = $pdo->prepare("UPDATE `ksiazki_arkonska` SET `Tytul` = ':tytul', `Autor` = ':autor', `Data_wydania` = ':data', `Wydawnictwo` = ':wydawnictwo', `ISBN` = ':ISBN', `Gatunek` = ':gatunek', `Lokalizacja` = ':lokalizacja' WHERE `ID` = ':id'");
+    $query = $pdo->prepare("UPDATE `ksiazki_arkonska` SET `Tytul` = :tytul, `Autor` = :autor, `Data_wydania` = :data, `Wydawnictwo` = :wydawnictwo, `ISBN` = :ISBN, `Gatunek` = :gatunek, `Lokalizacja` = :lokalizacja WHERE `ID` = :id");
 
 
     echo ("<pre>");
@@ -53,6 +53,7 @@ try {
     echo ("</pre>");
     echo "<br>";
 
+    $pdo=null;
 
     echo 'Book updated successfully';
     // $update = updateBooks($query);
