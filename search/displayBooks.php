@@ -11,7 +11,7 @@
   <center><h2>Wyszukiwane książki:</h2></center>
   <br>
   <?php
-  include("DBConnection.php");
+  include("../DBConnection.php");
   $searchTitle = $_REQUEST["search_title"];
   $searchAuthor = $_REQUEST["search_author"];
   $query = "";
@@ -61,7 +61,7 @@
                     <input form="delete" type="checkbox" name="<?php echo $row["ID"];?>">
                   </td>
                   <td>
-                    <form action="edit.php" method="post">
+                    <form action="../edition/editBook.php" method="post">
                       <input class="btn btn-primary btn-sm" type="submit" value="Edytuj">
                       <input type="hidden" name="id" value="<?php echo $row["ID"];?>">
                     </form>
@@ -71,13 +71,13 @@
             } ?>
             </table>
             <br>
-            <form id="delete" action="ConfirmDeletion.php" method="get">
+            <form id="delete" action="../deletion/confirmDeletion.php" method="get">
               <center><input class="btn btn-danger btn-md" type="submit" value="Usuń"></center>
             </form>
             <br>
             <center>
-              <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
-              <a href="SearchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+              <a href="../insertion/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+              <a href="../search/Books.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
             </center>
         <?php
       } else {

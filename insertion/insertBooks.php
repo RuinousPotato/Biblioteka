@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Wyszukiwanie książek</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <script src="search.js"></script>
 </head>
 <body bgcolor="87ceeb">
   <center><h2>Biblioteka</h2></center>
   <br>
     <?php
-    include("DBConnection.php");
+    include("../DBConnection.php");
     $tytul=$_POST["tytul"];
     $autor=$_POST["autor"];
     $data=$_POST["data"];
@@ -30,7 +30,7 @@
     <h3> Książka została dodana do bazy danych </h3>
     <br>
     <a href="EnterBook.php" class="btn btn-primary btn-lg"> Powrót do wpisywania książek </a>
-    <a href="SearchBooks.php" class="btn btn-primary btn-lg"> Szukaj lub usuwaj książki </a>    
+    <a href="SearchBooks.php" class="btn btn-primary btn-lg"> Szukaj lub usuwaj książki </a>
   </center>
 </body>
 </html>

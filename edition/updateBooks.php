@@ -56,16 +56,9 @@ try {
     $pdo=null;
 
     echo 'Book updated successfully';
-    // $update = updateBooks($query);
     } catch (\Throwable $e) {
       echo $e->getMessage();
     }
-/*    if ($query->execute() != 0) {
-
-    }else{
-        echo 'error in update query';
-    }
-*/
 }
 
 /*
@@ -105,65 +98,6 @@ if(isset($_POST['update']))
     }
 
 }
-*/
-/*
-//print_r(PDO::getAvailableDrivers());
-try {
-  $pdo = new PDO('mysql:host=localhost;dbname=biblioteka','root','root123');
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//print_r($handler);
-} catch(PDOException $e) {
-  echo $e->getMessage();
-  die();
-}
-
-class updateBook {
-    public $id, $tytul, $autor, $data,
-    $wydawnictwo, $isbn, $gatunek, $lokalizacja;
-
-    public function __construct(){
-
-    }
-}
-
-$autor = 'Abnett Dan';
-$tytul = 'Legion'
-
-$sql = "UPDATE ";
-$query = $pdo->prepare($sql);
-
-$query->execute(array(
-  ':autor' => $autor,
-  ':tytul' => $tytul
-));
-
-
-/*
-
-// if($query->rowCount()) {}
-$query = $pdo->query('SELECT * FROM ksiazki_arkonska');
-$query->setFetchMode(PDO::FETCH_CLASS, 'updateBook');
-$results = $query->fetchAll(PDO::FETCH_ASSOC);
-
- //$row = $query->fetch(PDO::FETCH_ASSOC);
- //echo '<pre>',print_r($row), '</pre>';
-if (count($results)){
-  while($row = $query->fetch(PDO::FETCH_OBJ)){
-    //echo $row->Tytul, '<br>';
-    echo '<pre>', print_r($row), '</row>';
-  }
-} else {
-  'There are no results';
-}
-*/
-
-/*
-$db_update = $pdo->prepare("INSERT INTO form_input (name, email, phone)
-VALUES (:name, :email, :phone)");
-$db_update->bindParam(':name', $name);
-$db_update->bindParam(':email', $email);
-$db_update->bindParam(':phone', $phone);
-$db_update->execute();
 */
 
 ?>

@@ -4,18 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Wpisywanie książek</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="../script.js"></script>
 </head>
 <body>
   <center><h2>Biblioteka</h2></center>
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <img src="books02.jpg" class="img-fluid hoverable" alt="Responsive image" height="auto" onclick="showElem(&quot;elefant&quot;)">
+        <img src="../resources/books02.jpg" class="img-fluid hoverable" alt="Responsive image" height="auto" onclick="showElem(&quot;elefant&quot;)">
       </div>
       <div class="col-sm-6">
-          <form action="InsertBooks.php" method="post">
+          <form action="insertBooks.php" method="post">
               <table border="0" align="center" cellpadding="5" cellspacing="5">
                   <tr>
                     <td> Podaj tytuł:</td>
@@ -55,11 +55,11 @@
                 </table>
               </br>
           </form>
-          <center><a href="http://localhost/biblioteka/searchbooks.php" class="btn btn-primary">Szukaj lub usuń książki</a></center>
+          <center><a href="http://localhost/biblioteka/search/searchBooks.php" class="btn btn-primary">Szukaj lub usuń książki</a></center>
           <br>
       </div>
       <div class="col-sm-3">
-        <img src="books01.jpg" class="img-fluid hoverable" alt="Responsive image" height="auto" onclick="showElem(&quot;elephant&quot;)">
+        <img src="../resources/books01.jpg" class="img-fluid hoverable" alt="Responsive image" height="auto" onclick="showElem(&quot;elephant&quot;)">
       </div>
     </div>
     <div class="row">

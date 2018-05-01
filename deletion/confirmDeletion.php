@@ -11,7 +11,7 @@
   <center><h2>Zamierzasz usunąć następujące książki:</h2></center>
   <br>
   <?php
-  include("DBConnection.php");
+  include("../DBConnection.php");
   $list = array_keys($_REQUEST);
   print_r($list);
   $id_list = "(".implode(", ", $list).")";
@@ -52,8 +52,8 @@
           <br>
         <br>
         <center>
-          <a href="EnterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
-          <a href="SearchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+          <a href="../insertion/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+          <a href="../search/Books.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
         </center>
         <?php
       } else {

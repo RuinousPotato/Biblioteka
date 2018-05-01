@@ -14,9 +14,9 @@
     <div class="row">
         <div class="col-sm-12">
           <br>
-          <center><a href="http://localhost/biblioteka/searchbooks.php" class="btn btn-primary">Szukaj lub usuń książki</a></center>
+          <center><a href="http://localhost/biblioteka/insertion/enterBook.php" class="btn btn-primary">Dodaj książkę do biblioteki</a></center>
           <br>
-          <center><a href="http://localhost/biblioteka/searchbooks.php" class="btn btn-primary">Szukaj lub usuń książki</a></center>
+          <center><a href="http://localhost/biblioteka/search/searchbooks.php" class="btn btn-primary">Szukaj, edytuj lub usuń książki</a></center>
           <br>
       </div>
     </div>
