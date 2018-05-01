@@ -1,3 +1,12 @@
+function showElem(elem) {
+    var x = document.getElementById(elem);
+    if (x.style.visibility === "visible") {
+        x.style.visibility = "hidden";
+    } else {
+        x.style.visibility = "visible";
+    }
+}
+
 function validateForm(){
   let searchTitle = document.forms["searchForm"]["search_title"].value;
   let searchAuthor = document.forms["searchForm"]["search_author"].value;
@@ -5,7 +14,6 @@ function validateForm(){
     alert("Podaj tytuł lub autora");
     return false;
   } else {
-    //alert('Code has accepted : you can try another');
     return true;
   }
 }

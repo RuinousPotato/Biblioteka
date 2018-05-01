@@ -6,7 +6,7 @@
     <title>Wyszukiwanie książek</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles.css">
-    <script src="search.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
   <center><h2>Wyszukiwanie książek</h2></center>
