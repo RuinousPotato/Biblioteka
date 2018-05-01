@@ -6,14 +6,17 @@ img:hover {
 opacity: 0.7;
 }
 
-#deleteForm {
-  display: block;
+.beige {
+  color: beige;
 }
 
-#updateForm {
-  display: block;
+body {
+  background-color: beige;
 }
 
-#searchDisplay {
-  display: block;
+#library {
+    background-color: beige;
+    background-image: url("resources/library01.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
 }

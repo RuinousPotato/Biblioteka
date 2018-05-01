@@ -7,16 +7,16 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
 </head>
-<body>
-  <center><h2>Biblioteka</h2></center>
-  <!--Once the form is submitted, all the form data is forwarded to InsertBooks.php -->
+<body id="library">
+  <br>
+  <center><h2 class="beige">Biblioteka</h2></center>
   <div class="container">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-12">
           <br>
-          <center><a href="http://localhost/biblioteka/insertion/enterBook.php" class="btn btn-primary">Dodaj książkę do biblioteki</a></center>
+          <center><a href="http://localhost/biblioteka/insertion/enterBook.php" class="btn btn-warning btn-lg">Dodaj książkę do biblioteki</a></center>
           <br>
-          <center><a href="http://localhost/biblioteka/search/searchbooks.php" class="btn btn-primary">Szukaj, edytuj lub usuń książki</a></center>
+          <center><a href="http://localhost/biblioteka/search/searchbooks.php" class="btn btn-warning btn-lg">Szukaj, edytuj lub usuń książki</a></center>
           <br>
       </div>
     </div>

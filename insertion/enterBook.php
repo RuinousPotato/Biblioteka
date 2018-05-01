@@ -8,7 +8,8 @@
     <script src="../script.js"></script>
 </head>
 <body>
-  <center><h2>Biblioteka</h2></center>
+  <br>
+  <center><h2>Wprowadź dane dodawanej książki:</h2></center>
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
@@ -62,6 +63,17 @@
         <img src="../resources/books01.jpg" class="img-fluid hoverable" alt="Responsive image" height="auto" onclick="showElem(&quot;elephant&quot;)">
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <center>
+          <a href="../index.php" class="btn btn-primary btn-md"> Strona główna</a>
+        </center>
+      </div>
+    </div>
+
+    <br>
+
     <div class="row">
       <div class="col-sm-5 surprise" id="elefant">
         <p class="text-right">Heer aus Sand und Licht gedeiht<br>

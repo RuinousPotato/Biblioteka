@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Biblioteka</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <center><h2>Zamierzasz usunąć następujące książki:</h2></center>
   <br>
+  <center><h2>Zamierzasz usunąć następujące książki:</h2></center>
   <?php
   include("../DBConnection.php");
   $list = array_keys($_REQUEST);
-  print_r($list);
+  //print_r($list);
   $id_list = "(".implode(", ", $list).")";
-  print_r($id_list);
+  //print_r($id_list);
 
   $query = "SELECT * FROM `ksiazki_arkonska` WHERE ID IN $id_list";
 
@@ -50,11 +50,15 @@
         } ?>
           </table>
           <br>
-        <br>
-        <center>
-          <a href="../insertion/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
-          <a href="../search/Books.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
-        </center>
+          <center>
+            <form name="id" action="DeleteBooks.php" method="post">
+              <input type="hidden" name="'id'" value="<?php echo "$id_list" ?>">
+              <input class="btn btn-danger" type="submit" value="Potwierdź usunięcie">
+            </form>
+            <br>
+              <a href="../insertion/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+              <a href="../search/searchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+          </center>
         <?php
       } else {
       echo "<center>No books found in the library.</center>";
@@ -63,10 +67,7 @@
       echo "<center><h4>Musisz zaznaczyć przynajmniej jedną książkę!</h4></center>";
     }
   ?>
-  <form name="id" action="DeleteBooks.php" method="post">
-    <input type="hidden" name="'id'" value="<?php echo "$id_list" ?>">
-    <input class="btn btn-danger" type="submit" value="Potwierdź usunięcie">
-  </form>
+
   </body>
 </html>
 <br>
