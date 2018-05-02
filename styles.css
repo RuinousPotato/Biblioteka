@@ -18,5 +18,5 @@ body {
     background-color: beige;
     background-image: url("resources/library01.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-size: cover;
 }
