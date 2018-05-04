@@ -11,7 +11,7 @@
   <br>
   <center><h2>Zamierzasz usunąć następujące książki:</h2></center>
   <?php
-  include("../DBConnection.php");
+  include("../include/functions.php");
   $list = array_keys($_REQUEST);
   //print_r($list);
   $id_list = "(".implode(", ", $list).")";

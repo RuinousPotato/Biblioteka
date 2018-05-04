@@ -12,20 +12,8 @@
 
   //print_r($_REQUEST);
   $id = $_POST['id'];
-
-  include("../DBConnection.php");
-  try{
-  $deleteQuery = "DELETE FROM ksiazki_arkonska
-                  WHERE ID IN $id";
-  //print_r($deleteQuery);
-
-  mysqli_query(OpenCon(),$deleteQuery);
-
-    echo "<center><h1>Usunięto wybrane książki.</h1></center>";
-  } catch (\Throwable $e) {
-      echo $e->getMessage();
-  }
-
+  include ("../include/functions.php");
+  deleteBooks($id);
 
   ?>
   <br>
