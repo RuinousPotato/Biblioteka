@@ -62,7 +62,7 @@
                     <input form="delete" type="checkbox" name="<?php echo $row["ID"];?>">
                   </td>
                   <td>
-                    <form action="../edition/editBook.php" method="post">
+                    <form action="../update/editBook.php" method="post">
                       <input class="btn btn-primary btn-sm" type="submit" value="Edytuj">
                       <input type="hidden" name="id" value="<?php echo $row["ID"];?>">
                     </form>
@@ -72,12 +72,12 @@
             } ?>
             </table>
             <br>
-            <form id="delete" action="../deletion/confirmDeletion.php" method="get">
+            <form id="delete" action="../delete/confirmDeletion.php" method="get">
               <center><input class="btn btn-danger btn-md" type="submit" value="Usuń"></center>
             </form>
             <br>
             <center>
-              <a href="../insertion/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+              <a href="../create/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
               <a href="../search/searchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
             </center>
         <?php

@@ -56,7 +56,7 @@
               <input class="btn btn-danger" type="submit" value="Potwierdź usunięcie">
             </form>
             <br>
-              <a href="../insertion/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
+              <a href="../create/enterBook.php" class="btn btn-primary btn-md"> Powrót do wpisywania książek </a>
               <a href="../search/searchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
           </center>
         <?php

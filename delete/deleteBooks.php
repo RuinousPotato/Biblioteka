@@ -30,7 +30,7 @@
   ?>
   <br>
   <center>
-    <a href="../insertion/enterBook.php" class="btn btn-primary btn-lg"> Powrót do wpisywania książek </a>
+    <a href="../create/enterBook.php" class="btn btn-primary btn-lg"> Powrót do wpisywania książek </a>
     <a href="../search/searchBooks.php" class="btn btn-primary btn-lg"> Szukaj lub usuwaj książki </a>
   </center>
 </body>

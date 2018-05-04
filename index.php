@@ -1,3 +1,4 @@
+<DOCTYPE
 <html>
 <head>
     <meta charset="utf-8">
@@ -14,7 +15,7 @@
     <div class="row">
         <div class="col-md-12">
           <br>
-          <center><a href="http://localhost/biblioteka/insertion/enterBook.php" class="btn btn-warning btn-lg">Dodaj książkę do biblioteki</a></center>
+          <center><a href="http://localhost/biblioteka/create/enterBook.php" class="btn btn-warning btn-lg">Dodaj książkę do biblioteki</a></center>
           <br>
           <center><a href="http://localhost/biblioteka/search/searchbooks.php" class="btn btn-warning btn-lg">Szukaj, edytuj lub usuń książki</a></center>
           <br>
