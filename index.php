@@ -1,13 +1,14 @@
-<DOCTYPE
+<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Wpisywanie książek</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Biblioteka</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
 </head>
+
 <body id="library">
   <br>
   <center><h2 class="beige">Biblioteka</h2></center>
@@ -21,5 +22,7 @@
           <br>
       </div>
     </div>
+  </div>
+
 </body>
 </html>
