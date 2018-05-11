@@ -67,7 +67,7 @@
     <div class="row">
       <div class="col-sm-12">
         <center>
-          <a href="../index.php" class="btn btn-primary btn-md"> Strona główna</a>
+          <a href="../biblioteka.php" class="btn btn-primary btn-md"> Strona główna</a>
         </center>
       </div>
     </div>

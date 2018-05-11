@@ -12,7 +12,7 @@
   <center><h2>Wyszukiwane książki:</h2></center>
   <br>
   <?php
-  include("../DBConnection.php");
+  include("../include/functions.php");
   $searchTitle = $_REQUEST["search_title"];
   $searchAuthor = $_REQUEST["search_author"];
   $query = "";
