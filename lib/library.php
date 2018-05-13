@@ -6,9 +6,9 @@
  * Page: Application library
  * */
 
- require __DIR__ . "/../database.php";
+ // require __DIR__ . "/../database.php";
 
-class DemoLib
+class Library
 {
 
     /*

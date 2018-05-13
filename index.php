@@ -8,9 +8,11 @@
 // Start Session
 session_start();
 
+require __DIR__ . '/database.php';
+
 // Application library ( with DemoLib class )
 require __DIR__ . '/lib/library.php';
-$app = new DemoLib();
+$app = new Library();
 
 $login_error_message = '';
 $register_error_message = '';
@@ -18,7 +20,7 @@ $register_error_message = '';
 // check Login request
 if (!empty($_POST['btnLogin'])) {
 
-    $username = trim($_POST['usernamea']);
+    $username = trim($_POST['username']);
     $password = trim($_POST['password']);
 
     if ($username == "") {

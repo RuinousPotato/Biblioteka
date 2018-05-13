@@ -11,11 +11,16 @@ if(empty($_SESSION['user_id']))
 
 // Database connection
 require __DIR__ . '/database.php';
+// include_once 'database.php';
+// if (!function_exists('DB')) {
+//     $db = DB();
+// }
+
 $db = DB();
 
-// Application library ( with DemoLib class )
+// Application library
 require __DIR__ . '/lib/library.php';
-$app = new DemoLib();
+$app = new Library();
 
 $user = $app->UserDetails($_SESSION['user_id']); // get user details
 
