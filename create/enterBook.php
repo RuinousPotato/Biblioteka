@@ -50,13 +50,13 @@
                     <td></td>
                   <td>
                     <input class="btn btn-success"  type="submit" value="Dodaj">
-                    <input class="btn btn-warning"  type="reset" value="Resetuj">
+                    <input class="btn btn-danger"  type="reset" value="Resetuj">
                   </td>
                   </tr>
                 </table>
               </br>
           </form>
-          <center><a href="http://localhost/biblioteka/search/searchBooks.php" class="btn btn-primary">Szukaj lub usuń książki</a></center>
+          <center><a href="http://localhost/biblioteka/search/searchBooks.php" class="btn btn-warning">Szukaj, edytuj lub usuń książki</a></center>
           <br>
       </div>
       <div class="col-sm-3">
@@ -67,7 +67,7 @@
     <div class="row">
       <div class="col-sm-12">
         <center>
-          <a href="../biblioteka.php" class="btn btn-primary btn-md"> Strona główna</a>
+          <a href="../biblioteka.php" class="btn btn-warning btn-md"> Strona główna</a>
         </center>
       </div>
     </div>

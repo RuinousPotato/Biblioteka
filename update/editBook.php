@@ -1,10 +1,10 @@
 <?php
 
-//include './include/config.php';
-print_r($_REQUEST);
+// include './include/config.php';
+// print_r($_REQUEST);
 if (isset($_REQUEST['id'])) {
     $id = $_REQUEST['id'];
-    echo $id;
+  //  echo $id;
 }
 
 try {
@@ -34,16 +34,54 @@ echo $e->getMessage();
 </head>
 <body>
   <center>
+    <br>
+    <h1>Zaktualizuj dane książki</h1>
+    <br>
     <form action="UpdateBooks.php" method="post">
-        <input type="hidden" name="id" value = "<?php echo $book[0]['ID']; ?>">
-        <input type="text" name="Tytul" value="<?php echo $book[0]['Tytul']; ?>"> <br>
-        <input type="text" name="Autor" value="<?php echo $book[0]['Autor']; ?>"> <br>
-        <input type="text" name="Data_Wydania" value="<?php echo $book[0]['Data_wydania']; ?>"> <br>
-        <input type="text" name="Wydawnictwo" value="<?php echo $book[0]['Wydawnictwo']; ?>"> <br>
-        <input type="text" name="ISBN" value="<?php echo $book[0]['ISBN']; ?>"> <br>
-        <input type="text" name="Gatunek" value="<?php echo $book[0]['Gatunek']; ?>"> <br>
-        <input type="text" name="Lokalizacja" value="<?php echo $book[0]['Lokalizacja']; ?>"> <br>
-        <input type="submit" name="submit" value="Zapisz">
+      <input type="hidden" name="id" value = "<?php echo $book[0]['ID']; ?>">
+      <table>
+        <tr>
+          <td>Tytuł</td>
+          <td>
+            <input type="text" name="Tytul" value="<?php echo $book[0]['Tytul']; ?>"> <br>
+          </td>
+        </tr>
+          <td>Autor</td>
+          <td>
+            <input type="text" name="Autor" value="<?php echo $book[0]['Autor']; ?>"> <br>
+          </td>
+        </tr>
+          <td>Data wydania</td>
+          <td>
+            <input type="text" name="Data_Wydania" value="<?php echo $book[0]['Data_wydania']; ?>"> <br>
+          </td>
+        </tr>
+          <td>Wydawnictwo</td>
+          <td>
+            <input type="text" name="Wydawnictwo" value="<?php echo $book[0]['Wydawnictwo']; ?>"> <br>
+          </td>
+        </tr>
+          <td>ISBN</td>
+          <td>
+            <input type="text" name="ISBN" value="<?php echo $book[0]['ISBN']; ?>"> <br>
+          </td>
+        </tr>
+          <td>Gatunek</td>
+          <td>
+            <input type="text" name="Gatunek" value="<?php echo $book[0]['Gatunek']; ?>"> <br>
+          </td>
+        </tr>
+          <td>Lokalizacja</td>
+          <td>
+            <input type="text" name="Lokalizacja" value="<?php echo $book[0]['Lokalizacja']; ?>"> <br>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <input type="submit" class="btn btn-warning btn-md" name="submit" value="Zapisz">
     </form>
+    <br>
+    <a href="../create/enterBook.php" class="btn btn-warning btn-sm"> Wpisz nową książkę </a>
+    <a href="../search/searchBooks.php" class="btn btn-warning btn-sm"> Szukaj kolejnej książki </a>
   </center>
 </body>

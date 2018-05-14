@@ -53,9 +53,11 @@ try {
 </head>
 <body>
   <center>
+    <br>
     <h1>Informacje o książce zostały zaktualizowane.</h1>
-    <a href="../create/enterBook.php" class="btn btn-primary btn-md"> Wpisz nową książkę </a>
-    <a href="../search/searchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+    <br>
+    <a href="../create/enterBook.php" class="btn btn-warning btn-md"> Wpisz nową książkę </a>
+    <a href="../search/searchBooks.php" class="btn btn-warning btn-md"> Szukaj kolejnej książki </a>
   </center>
 </body>
 <?php
