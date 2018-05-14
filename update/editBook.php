@@ -24,15 +24,26 @@ echo $e->getMessage();
 }
 
 ?>
-
-<form action="UpdateBooks.php" method="post">
-    <input type="hidden" name="id" value = "<?php echo $book[0]['ID']; ?>">
-    <input type="text" name="Tytul" value="<?php echo $book[0]['Tytul']; ?>"> <br>
-    <input type="text" name="Autor" value="<?php echo $book[0]['Autor']; ?>"> <br>
-    <input type="text" name="Data_Wydania" value="<?php echo $book[0]['Data_wydania']; ?>"> <br>
-    <input type="text" name="Wydawnictwo" value="<?php echo $book[0]['Wydawnictwo']; ?>"> <br>
-    <input type="text" name="ISBN" value="<?php echo $book[0]['ISBN']; ?>"> <br>
-    <input type="text" name="Gatunek" value="<?php echo $book[0]['Gatunek']; ?>"> <br>
-    <input type="text" name="Lokalizacja" value="<?php echo $book[0]['Lokalizacja']; ?>"> <br>
-    <input type="submit" name="submit" value="Zapisz">
-</form>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edycja książki</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+  <center>
+    <form action="UpdateBooks.php" method="post">
+        <input type="hidden" name="id" value = "<?php echo $book[0]['ID']; ?>">
+        <input type="text" name="Tytul" value="<?php echo $book[0]['Tytul']; ?>"> <br>
+        <input type="text" name="Autor" value="<?php echo $book[0]['Autor']; ?>"> <br>
+        <input type="text" name="Data_Wydania" value="<?php echo $book[0]['Data_wydania']; ?>"> <br>
+        <input type="text" name="Wydawnictwo" value="<?php echo $book[0]['Wydawnictwo']; ?>"> <br>
+        <input type="text" name="ISBN" value="<?php echo $book[0]['ISBN']; ?>"> <br>
+        <input type="text" name="Gatunek" value="<?php echo $book[0]['Gatunek']; ?>"> <br>
+        <input type="text" name="Lokalizacja" value="<?php echo $book[0]['Lokalizacja']; ?>"> <br>
+        <input type="submit" name="submit" value="Zapisz">
+    </form>
+  </center>
+</body>

@@ -2,8 +2,8 @@
 
 if (isset($_POST['submit'])) {
 
-    print_r($_REQUEST);
-    echo "<br>";
+    // print_r($_REQUEST);
+    // echo "<br>";
 try {
     $pdo=new PDO("mysql:host=localhost;dbname=biblioteka", "root", "root123");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -23,10 +23,10 @@ try {
     $query = $pdo->prepare("UPDATE `ksiazki_arkonska` SET `Tytul` = :tytul, `Autor` = :autor, `Data_wydania` = :data, `Wydawnictwo` = :wydawnictwo, `ISBN` = :ISBN, `Gatunek` = :gatunek, `Lokalizacja` = :lokalizacja WHERE `ID` = :id");
 
 
-    echo ("<pre>");
-    print_r($query);
-    echo ("</pre>");
-    echo "<br>";
+    // echo ("<pre>");
+    // print_r($query);
+    // echo ("</pre>");
+    // echo "<br>";
 
 
     $query->bindParam(':id', $id);
@@ -38,24 +38,27 @@ try {
     $query->bindParam(':gatunek', $gatunek);
     $query->bindParam(':lokalizacja', $lokalizacja);
 
-
-    echo ("<pre>");
-    print_r($query);
-    echo ("</pre>");
-    echo "<br>";
-
-
     $query->execute();
 
-
-    echo ("<pre>");
-    $query->debugDumpParams();
-    echo ("</pre>");
-    echo "<br>";
-
     $pdo=null;
+?>
 
-    echo 'Book updated successfully';
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zaktualizowano informacje o książce</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+  <center>
+    <h1>Informacje o książce zostały zaktualizowane.</h1>
+    <a href="../create/enterBook.php" class="btn btn-primary btn-md"> Wpisz nową książkę </a>
+    <a href="../search/searchBooks.php" class="btn btn-primary btn-md"> Szukaj kolejnej książki </a>
+  </center>
+</body>
+<?php
     } catch (\Throwable $e) {
       echo $e->getMessage();
     }
