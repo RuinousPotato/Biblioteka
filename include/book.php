@@ -17,9 +17,18 @@ class Book
 
 
 
-  function __construct(argument)
+  function __construct(var $id, $tytul,
+  $autor, $data, $wydawnictwo, $ISBN,
+  $gatunek, $lokalizacja)
   {
-    // code...
+    $this->id=$id;
+    $this->tytul=$tytul;
+    $this->autor=$autor;
+    $this->data=$data;
+    $this->wydawnictwo=$wydawnictwo;
+    $this->ISBN=$ISBN;
+    $this->gatunek=$gatunek;
+    $this->lokalizacja=$lokalizacja;
   }
 }
 
